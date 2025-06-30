@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.navasgroup.annoteweb",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 8,
+      "versionName": "1.50",
+      "enabled": true,
+      "outputFile": "AnnoteWeb-1.50-release.apk"
+    }
+  ]
+}

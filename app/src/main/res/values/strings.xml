@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AnnoteWeb</string>
+    <string name="prepend">https://via.hypothes.is/</string>
+    <string name="AppHelp"><b>Annotate web pages with Hypothes.is</b>\n\nWhen viewing a web page in a web browser (e.g., Chrome), use <b>Share</b> action and select this app to open that web page in Hypothes.is (using the default browser, not necessarily the same browser) for viewing and editing annotations.\n\n<b>Hypothes.is</b> is an open source project to <i>annotate</i> (highlight, comment, etc) the Web, a \"peer review layer for the entire Internet\", including a reputation system. Annotations can be private or public, and can form a conversation. A free account is required to create annotations.\n\n<b>Disclaimers</b>: Use at your own risk.\nThis app is not affiliated with Hypothes.is</string>
+</resources>

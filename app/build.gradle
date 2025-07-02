@@ -1,30 +1,47 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 28
+    namespace = 'com.navasgroup.annoteweb' // OLD app's package name
+    compileSdkVersion 35
+
     defaultConfig {
-        applicationId "com.navasgroup.annoteweb"
-        minSdkVersion 15
-        //noinspection OldTargetApi
-        targetSdkVersion 28
-        versionCode 8
-        versionName "1.50"
-        setProperty("archivesBaseName", "AnnoteWeb-$versionName")
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.navasgroup.annoteweb" // OLD app's ID
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode 9
+        versionName "1.60"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    // testImplementation "org.robolectric:robolectric:4.10"
+}
+
+// Optional: custom APK naming (modern syntax)
+android.applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def newApkName = "AnnoteWeb-${variant.versionName}.apk"
+        outputFileName = newApkName
+    }
 }

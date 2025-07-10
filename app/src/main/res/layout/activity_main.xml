@@ -16,7 +16,9 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:padding="16dp"
+        android:layout_above="@id/bottomButtonBar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,12 +26,89 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="@string/AppHelp"
+                android:text="@string/Subhead"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:id="@+id/textView"
-                android:layout_margin="16dp" />
+                android:id="@+id/Subhead" />
+
+            <TextView
+                android:text="@string/AppHelp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                android:id="@+id/textView1" />
+
+            <TextView
+                android:id="@+id/whatsNewHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What's New"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/whatsNewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:text="@string/AppHelp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:text="@string/Privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                android:id="@+id/Privacy" />
+
+            <TextView
+                android:text="@string/Support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                android:id="@+id/Support" />
+
+            <TextView
+                android:text="@string/Disclaimers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                android:id="@+id/Disclaimers" />
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close"
+            android:layout_marginEnd="24dp"/>
+
+        <Button
+            android:id="@+id/helpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"/>
+    </LinearLayout>
 </RelativeLayout>
